@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify Clone</title>
+</head>
+<body>
+    <div class="background">
+        <img src="" id="bg-img">
+    </div>
+
+    
+    <div class="main-container">
+        <h1 class="official-music" id="official-music"><i class="fa-solid fa-music">Music</i></h1>
+        <!-- <button class="official-video" id="official-video"><i class="fa-brands fa-youtube"></i></button> -->
+
+        <!-- main-part -->
+        <div class="left">
+            <img src="" id="track-img">
+            <p id="volume_show">90</p>
+            <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+            <input type="range" min="0" max="100" value="99" class="volume_slider" onchange="volume_change()">
+        </div>
+
+        <!-- second-part -->
+
+        <div class="right">
+            <div class="show_song_no">
+                <p id="present">1</p>
+                <p>/</p>
+                <p id="total">3</p>
+            </div>
+
+            <!-- song-title -->
+
+            <p id="title">title.song</p>
+            <p id="artist">artist name</p>
+
+            <!-- middle part -->
+            <div class="middle">
+                <button onclick="previous_song()" id="pre"><i class="fa-solid fa-backward"></i></button>
+                <button onclick="play()" id="play"><i class="fa-solid fa-play"></i></button>
+                <button onclick="next_song()" id="next"><i class="fa-solid fa-forward"></i></button>
+            </div>
+
+            <!-- finish part -->
+            <div class="finish-part">
+                <input type="range" min="0" max="100" value="0" id="finish-slider" onchange="change_part">  
+            </div>
+            <!-- <button id="auto" onclick="autoplay_switch()">Auto Play <i class="fa-solid fa-circle-notch"></i></button> -->
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
